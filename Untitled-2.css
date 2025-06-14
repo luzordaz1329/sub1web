@@ -1,0 +1,165 @@
+/* Reset y estilos base */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+body {
+    background: rgb(189, 216, 252);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: rgb(126, 170, 219);
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+header h1 {
+    line-height: 1.2;
+    font-size: 2rem;
+}
+
+/* Navegación */
+nav {
+    background: rgb(175, 208, 252);
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: rgb(126, 170, 219);
+    padding: 20px;
+}
+
+.article-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-section, .image-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.text-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.text-section p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .article-section {
+        flex-direction: column;
+    }
+    
+    .text-section, .image-section {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .image-section img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .content {
+        padding: 10px;
+    }
+    
+    .text-section, .image-section {
+        padding: 10px;
+    }
+    
+    .text-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .image-section img {
+        max-width: 250px;
+    }
+}
